@@ -1,0 +1,6 @@
+framework module Pods_Mojaz {
+  umbrella header "Pods-Mojaz-umbrella.h"
+
+  export *
+  module * { export * }
+}

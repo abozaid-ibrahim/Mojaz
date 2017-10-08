@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AV Player View Controller-->
+        <scene sceneID="lEc-rj-5kP">
+            <objects>
+                <avPlayerViewController storyboardIdentifier="VideoPlayerController" videoGravity="AVLayerVideoGravityResizeAspect" id="tmf-6R-QzP" customClass="VideoPlayerController" customModule="Mojaz" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <outlet property="customControllsView" destination="8sM-GS-ZXr" id="RR1-IM-nPc"/>
+                        <outlet property="optionsView" destination="Mmb-Uo-Qw8" id="BdC-fN-h7V"/>
+                        <outlet property="storyImageView" destination="JAl-SK-aYM" id="WRi-PY-bcw"/>
+                    </connections>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDs-lU-ITa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="8sM-GS-ZXr">
+                    <rect key="frame" x="0.0" y="0.0" width="341" height="565"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trika" translatesAutoresizingMaskIntoConstraints="NO" id="JAl-SK-aYM">
+                            <rect key="frame" x="0.0" y="0.0" width="341" height="565"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="4mk-rb-irv" appends="YES" id="fa6-Zk-xab"/>
+                            </connections>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fMu-gz-Tqs" userLabel="playerControll">
+                            <rect key="frame" x="0.0" y="80" width="341" height="485"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRY-Bd-Pca">
+                                    <rect key="frame" x="0.0" y="0.0" width="113.5" height="485"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Previous"/>
+                                    <connections>
+                                        <action selector="previousAction:" destination="tmf-6R-QzP" eventType="touchUpInside" id="irm-fL-JKK"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZd-yj-EXs">
+                                    <rect key="frame" x="113.5" y="0.0" width="114" height="485"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Play Pause"/>
+                                    <connections>
+                                        <action selector="playPauseAction:" destination="tmf-6R-QzP" eventType="touchUpInside" id="8ky-Jw-Rm1"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIm-pe-cjh">
+                                    <rect key="frame" x="227.5" y="0.0" width="113.5" height="485"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Next"/>
+                                    <connections>
+                                        <action selector="nextAction:" destination="tmf-6R-QzP" eventType="touchUpInside" id="XLJ-mN-97m"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </stackView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmb-Uo-Qw8" userLabel="share">
+                            <rect key="frame" x="0.5" y="515" width="341" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebv-P4-JVX">
+                                    <rect key="frame" x="18" y="15" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUp-Tc-xdp">
+                                    <rect key="frame" x="260" y="15" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="khl-4I-92G"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1q-61-Csw">
+                            <rect key="frame" x="285" y="42" width="51" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="options"/>
+                            <connections>
+                                <action selector="optionsAction:" destination="tmf-6R-QzP" eventType="touchUpInside" id="RnH-fn-9A1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fMu-gz-Tqs" firstAttribute="centerX" secondItem="8sM-GS-ZXr" secondAttribute="centerX" id="5UE-Dj-JZ5"/>
+                        <constraint firstItem="JAl-SK-aYM" firstAttribute="width" secondItem="8sM-GS-ZXr" secondAttribute="width" id="BZu-TM-HCO"/>
+                        <constraint firstItem="JAl-SK-aYM" firstAttribute="centerY" secondItem="8sM-GS-ZXr" secondAttribute="centerY" id="G5G-Ud-d15"/>
+                        <constraint firstItem="n1f-ai-8yH" firstAttribute="bottom" secondItem="fMu-gz-Tqs" secondAttribute="bottom" id="Kke-h6-mBj"/>
+                        <constraint firstItem="Mmb-Uo-Qw8" firstAttribute="centerX" secondItem="8sM-GS-ZXr" secondAttribute="centerX" id="MaB-U1-Ov9"/>
+                        <constraint firstItem="fMu-gz-Tqs" firstAttribute="width" secondItem="8sM-GS-ZXr" secondAttribute="width" id="SSS-vI-Ak4"/>
+                        <constraint firstItem="fMu-gz-Tqs" firstAttribute="top" secondItem="n1f-ai-8yH" secondAttribute="top" constant="60" id="Xzv-Cp-bmw"/>
+                        <constraint firstItem="JAl-SK-aYM" firstAttribute="height" secondItem="8sM-GS-ZXr" secondAttribute="height" id="gJz-NR-w0k"/>
+                        <constraint firstItem="n1f-ai-8yH" firstAttribute="bottom" secondItem="Mmb-Uo-Qw8" secondAttribute="bottom" id="l83-Uj-wQi"/>
+                        <constraint firstItem="Mmb-Uo-Qw8" firstAttribute="width" secondItem="8sM-GS-ZXr" secondAttribute="width" id="sRh-LI-ooj"/>
+                        <constraint firstItem="JAl-SK-aYM" firstAttribute="centerX" secondItem="8sM-GS-ZXr" secondAttribute="centerX" id="uwX-2o-00N"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="n1f-ai-8yH"/>
+                </view>
+                <swipeGestureRecognizer direction="down" id="4mk-rb-irv">
+                    <connections>
+                        <action selector="swipeDownToDismiss:" destination="tmf-6R-QzP" id="T1h-5r-Ztf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-3013" y="1638"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trika" width="720" height="405"/>
+    </resources>
+</document>
